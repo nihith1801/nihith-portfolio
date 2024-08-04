@@ -16,15 +16,6 @@ const RiveComponent = dynamic(
 
 const Hero: React.FC = () => {
   const words = ["Python", "TensorFlow", "Data-Science", "Machine-Learning"];
-  const [currentWordIndex, setCurrentWordIndex] = useState(0);
-
-  useEffect(() => {
-    const wordInterval = setInterval(() => {
-      setCurrentWordIndex((prevIndex) => (prevIndex + 1) % words.length);
-    }, 3000);
-
-    return () => clearInterval(wordInterval);
-  }, [words]);
 
   return (
     <div className="min-h-[calc(100vh-80px)] flex flex-col lg:flex-row items-center justify-between px-4 sm:px-8 md:px-16 lg:px-24 text-white relative overflow-hidden">
@@ -40,7 +31,6 @@ const Hero: React.FC = () => {
             <span className="inline-block">
               <FlipWords
                 words={words}
-                currentIndex={currentWordIndex}
                 className="font-bold"
               />
             </span>

@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@babel/preset-env": "^7.25.3",
+    "@babel/preset-react": "^7.24.7",
     "@emailjs/browser": "^4.4.1",
     "@rive-app/react-canvas": "^4.13.5",
     "clsx": "^2.1.1",
